@@ -1,0 +1,85 @@
+const Discord = require('discord.js');
+const client = new Discord.Client
+const işaret = require('./işaret.json')
+const { Client, MessageEmbed } = require('discord.js')
+
+var prefix = işaret.prefix
+
+client.on('ready', () => {
+  console.log(`Selam ${client.user.tag} Sunucuya Giriş Yaptı!`);
+
+  var actvs = [
+        `${prefix}yapımcı ${client.guilds.cache.size} sunucuyu`,
+        `Edit By MrRashad`,
+        `ARENUS 45 Üye`
+    ];
+
+    client.user.setActivity(actvs[Math.floor(Math.random() * (actvs.length - 1) + 1)], { type: 'PLAYING' });
+    setInterval(() => {
+        client.user.setActivity(actvs[Math.floor(Math.random() * (actvs.length - 1) + 1)], { type: 'PLAYING'});
+    }, 8000);
+});
+
+client.on('message', msg => {
+  if (msg.content.toLowerCase() === 'sa') {
+    msg.channel.send('Aleyküm Selam knk');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content.toLowerCase() === prefix + 'yapımcı') {
+    msg.channel.send('MR RasHad#2314');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content.toLowerCase() === 'hoşcakal') {
+    msg.channel.send('Güle Güle Kardeşim');
+  }
+});
+
+client.on('message', message => {
+  if (message.content.toLowerCase() === 'mrrashad') {
+    const kanal = new MessageEmbed()
+
+    .setTitle('MrRasHad')
+    .setDescription('Kanala abone olun.')
+    .setAuthor('ARENUS')
+    .setColor("RED")
+    .setThumbnail('https://yt3.ggpht.com/E5pVaPPkYYzJjcFkumQEKW4Pp9Kqm6j1KJg0CxkWc62tRKBn-4c9j_82iJowYOyohXEutiOeXA=s88-c-k-c0x00ffffff-no-rj')
+    .addField(':hearts: Yorum Yazın!', 'Videoyu beğenmeyi unutmayın!')
+    message.channel.send(kanal);
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content.toLowerCase() === '!admin') {
+    msg.channel.send('UmutTuncel');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content.toLowerCase() === '!discord') {
+    msg.channel.send('https://discord.gg/PfaJ8DYrPA');
+  }
+  });
+
+client.on('message', msg => {
+  if (msg.content.toLowerCase() ==='arenus') {
+    msg.channel.send('Evt knk');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content.toLowerCase() === '!youtube') {
+    msg.channel.send('https://www.youtube.com/channel/UCo88tTjMca2CPtLVZfh9FNg');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content.toLowerCase() === 'nasılsın') {
+    msg.channel.send('İyi knk sen nasılsın');
+  }
+});
+
+client.login('ODQ5OTQyOTU4OTQ1NDY4NDI3.YLihEA.huLmMqpf9IGPWvGUAxpbI0K4d_8');
