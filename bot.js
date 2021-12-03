@@ -34,10 +34,10 @@ client.on('guildMemberRemove', member => {
 client.on('ready', () => {
 
   var actvs = [
-        `${client.guilds.cache.size} Sunucudayım`,
-        `Mr.RasHad YouTube`,
-        `Edit By MrRashad`,
-        `ARENUS 48 Üye`,
+        `Yeni Komutlar Eklenecek`,
+        `Discord:https://discord.gg/PjRVWvyZN5`,
+        `Edit By Arenus`,
+        `Nitro Hub`,
         `!çal, !ping, !avatar Komutu Eklendi!`,
     ];
 
